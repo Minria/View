@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-2</title>
+    <style>
+        /* 标签选择器 */
+        div{
+            color: red;
+        }
+        /* 类选择器 */
+        /* 加点表示一个类 */
+        .green{
+            color: green;
+        }
+        .front{
+            font-size: 30px;
+        }
+        /* id选择器 */
+        #first{
+            color: blueviolet;
+        }
+        /* 通配符选择器 */
+        /* 选择所有元素，目的是消除浏览器默认设置 */
+        *{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="first">这是第一句话</div>
+    <div class="green">这是第二句话</div>
+    <div>这是第三句话</div>
+    <div class="green front">这是第四句话</div>
+
+    <style>
+        /* 复合选择器 */
+        /* 后代选择器 不一定是子元素,也可以是孙子元素*/
+        ol li{
+            color: red;
+        }
+        ol a{
+            color: blueviolet;
+        }
+        /* 子选择器 */
+        .list>a{
+            font-size: 30px;
+        }        
+    </style>
+    <ul>
+        <li>aaa</li>
+        <li>aaa</li>
+        <li>aaa</li>
+    </ul>
+    <ol>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>bbb</li>
+        <li>
+            <a href="#">bbb</a>
+        </li>
+    </ol>
+    <ol>
+        <a href="#">ccc</a>
+    </ol>
+    <style>
+        /* 并集选择器 */
+        /* 一次选择多个标签 */
+        div,
+        h3,
+        ul>li{
+            font-size: 30px;
+        }
+    </style>
+    <div>苹果</div>
+    <h3>香蕉</h3>
+    <ul>
+        <li>橙子</li>
+        <li>火龙果</li>
+    </ul>
+
+
+    <style>
+        /* 伪类选择器 */
+        /* 链接伪类选择器 和a标签搭配使用 根a标签的状态进行选择
+        未被访问过
+        已经被访问过
+        鼠标悬停 
+        活动链接 */
+        a{
+           font-size: 30px; 
+        }        
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: rgb(48, 211, 48);
+        }
+        a:hover{
+            color: blueviolet;
+        }
+        a:active{
+            color: greenyellow;
+        }
+    </style>
+    <a href="http://www.sougou.com">搜狗</a>
+    <!-- force伪类选择器
+    表示获取焦点是被选择 -->
+    <style>
+        input:focus{
+            color: red;
+        }
+    </style>
+    <div>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+    <style>
+        span{
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(42, 165, 42);
+            /* 文字倾斜和取消倾斜 */
+            font-style: italic;
+            font-style: normal;
+        }
+    </style>
+    <span>
+        这是一句话
+    </span>
+    <style>
+        .test1{
+            font-size: 30px;
+            text-align: center;
+            font-style: italic;
+            text-decoration: underline;
+            text-indent: 20px;
+        }
+    </style>
+    <p class="test1">
+        圣诞节卡拉圣诞节爱上了拉萨的福利房卡
+    </p>
+</body>
+</html>
